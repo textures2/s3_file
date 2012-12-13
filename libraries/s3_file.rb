@@ -3,7 +3,7 @@ require 'time'
 require 'openssl'
 require 'base64'
 
-module S3File
+module S3FileUtil
   def get_from_s3(bucket,path,aws_access_key_id,aws_secret_access_key)
     now = Time.now().utc.strftime('%a, %d %b %Y %H:%M:%S GMT')
     string_to_sign = "GET\n\n\n%s\n/%s%s" % [now,bucket,path]

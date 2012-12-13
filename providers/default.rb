@@ -1,4 +1,4 @@
-include S3File
+include S3FileUtil
 
 action :create do
   new_resource = @new_resource
